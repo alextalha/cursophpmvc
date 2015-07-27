@@ -5,9 +5,14 @@ namespace PhpMvc;
 
 class View {
     
-    public $template;
+    private $template,$data;
     
     public function __construct(){
+        
+    }
+    
+    public function setData($data){
+        $this->data = $data;
         
     }
     
@@ -16,22 +21,16 @@ class View {
     }
     
     
-    public function getTemplate($template){
-        $file =  "view/pages/".$template.".phtml";
+    public function __destruct(){
+        $file =  "view/pages/".$this->template.".phtml";
         
         if(file_exists($file)){
            include $file;
         }else{
-            include 'view/pages/error404.phtml';
+            include 'view/pages/index.phtml';
         }
         
     }
-    
-//    public function __destruct(){
-//        $file = 'view/pages/'.$this->template.".phtml";
-//        
-//       
-//    }
     
 }
 

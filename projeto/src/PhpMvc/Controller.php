@@ -14,18 +14,32 @@ class Controller {
     }
  
     
+    public function setAction($action)
+    {
+      $this->view->setTemplate($action);
+      
+    }
+   
     
-    public function index() {
-        $this->view->getTemplate('index');
+    public function nome($nome){
+        $this->view->setData(array('nome' => $nome));
         
     }
     
-    public function sobrenos(){
-            $this->view->getTemplate('sobrenos');
+    public function index() 
+    {
+        
     }
+    
+    public function sobrenos()
+    {
+        
+    }
+    
 
-    public function error404(){
-             $this->view->getTemplate('error404');
+    public function error404()
+    {
         
+       
     }
 }
