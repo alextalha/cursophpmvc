@@ -1,0 +1,18 @@
+{
+    "require" : {
+        "webdevbr/doctrine" : "1.0.0",
+        "aura/router" : "2.x-dev"
+    },  
+    
+    "config" : {
+        "bin-dir" : "./bin"
+    },
+    
+    "autoload" : {
+        "psr-0" : {
+            "PhpMvc" : "src"
+        }
+    } 
+    
+    
+}
