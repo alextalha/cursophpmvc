@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpMvc\Controller;
+namespace PhpMvc;
 
 
 class Model {
